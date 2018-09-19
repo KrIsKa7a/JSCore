@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colorful Numbers</title>
+</head>
+<body>
+    <script>
+        function printColorfulNumbers(n) {
+            let HTML = "<ul>\n";
+            let color = "";
+
+            for (let i = 1; i <= +n; i++) {
+                color = i % 2 === 0 ? "blue" : "green";
+
+                HTML += `<li><span style="color: ${color}">${i}</span></li>\n`;
+            }
+
+            HTML += "</ul>";
+
+            return HTML;
+        }
+
+        document.body.innerHTML = printColorfulNumbers(10);
+    </script>
+</body>
+</html>
