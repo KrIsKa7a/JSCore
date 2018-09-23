@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <script>
+        function multiplicationTable(n) {
+            let HTML = '<table border="1">\n';
+
+            //Make the table head
+            HTML += '<tr><th>x</th>';
+
+            for (let i = 1; i <= n; i++) {
+                HTML += `<th>${i}</th>`;
+            }
+
+            HTML += '</tr>\n';
+
+            //Here we start making the table results
+            for (let row = 1; row <= n; row++) {
+                //let multiplicator = 1;
+
+                HTML += `<tr><th>${row}</th>`;
+
+                for (let col = 1; col <= n; col++) {
+                    let result = col * row;
+
+                    HTML += `<td>${result}</td>`;
+                }
+
+                HTML += '</tr>\n';
+            }
+
+            HTML += '</table>';
+
+            return HTML;
+        }
+
+        document.body.innerHTML = multiplicationTable(15);
+    </script>
+</body>
+</html>
